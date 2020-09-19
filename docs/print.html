@@ -1,0 +1,675 @@
+<!DOCTYPE HTML>
+<html lang="tr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Markdown Elkitabı</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Markdown, her türlü düzenlemeye olanak veren basit bir işaretleme dilidir.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+		<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+		
+        
+    	
+		</head>
+	<body>
+
+	<!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="İçindekiler">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+			                <ol class="chapter"><li class="expanded affix "><a href="index.html">Giriş</a></li><li class="expanded affix "><a href="nasil-okunmali.html">Bu Kitap Nasıl Okunmalı?</a></li><li class="spacer"></li><li class="expanded "><a href="1/index.html"><strong aria-hidden="true">1.</strong> Başlarken</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="1/markdown-nedir.html"><strong aria-hidden="true">1.1.</strong> Markdown Nedir</a></li><li class="expanded "><a href="1/kurulacak-yazilimlar.html"><strong aria-hidden="true">1.2.</strong> Markdown İçin Kurulacak Yazılımlar</a></li></ol></li><li class="expanded "><a href="2/index.html"><strong aria-hidden="true">2.</strong> Markdown İle Neler Yapabiliriz?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="2/web-sitesi.html"><strong aria-hidden="true">2.1.</strong> Web Sitesi</a></li><li class="expanded "><a href="2/dokuman.html"><strong aria-hidden="true">2.2.</strong> Doküman</a></li><li class="expanded "><a href="2/not.html"><strong aria-hidden="true">2.3.</strong> Not</a></li><li class="expanded "><a href="2/kitap.html"><strong aria-hidden="true">2.4.</strong> Kitap</a></li><li class="expanded "><a href="2/slayt.html"><strong aria-hidden="true">2.5.</strong> Slayt</a></li><li class="expanded "><a href="2/eposta.html"><strong aria-hidden="true">2.6.</strong> E-posta</a></li><li class="expanded "><a href="2/dokumantasyon.html"><strong aria-hidden="true">2.7.</strong> Dokümantasyon</a></li></ol></li><li class="expanded "><a href="3/index.html"><strong aria-hidden="true">3.</strong> Temel Sözdizimi</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="3/baslamadan-once.html"><strong aria-hidden="true">3.1.</strong> Başlamadan Önce</a></li><li class="expanded "><a href="3/basliklar.html"><strong aria-hidden="true">3.2.</strong> Başlıklar</a></li><li class="expanded "><a href="3/paragraflar.html"><strong aria-hidden="true">3.3.</strong> Paragraflar</a></li><li class="expanded "><a href="3/vurgulamalar.html"><strong aria-hidden="true">3.4.</strong> Vurgulamalar</a></li><li class="expanded "><a href="3/alinti-bloklari.html"><strong aria-hidden="true">3.5.</strong> Alıntı Blokları</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="İçindekiler'i göster/gizle" aria-label="İçindekiler'i göster/gizle" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Temayı Değiştir" aria-label="Temayı Değiştir" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Ara.(Kısayol: s)" aria-label="Arama Çubuğu'nu göster/gizle" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Markdown Elkitabı - Bora FIRLANGEÇ</h1>
+
+                        <div class="right-buttons">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Bu Kitapta Ara..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#gİrİŞ" id="gİrİŞ">GİRİŞ</a></h1>
+<p>Yazı yazmak, neredeyse çocukluğumdan beri büyük bir tutkudur benim için. İlkokul yıllarımızda sınıfça kolları sıvayıp, iki haftalık okul dergisi çıkarma hevesim beni Blog sitesi açmaya kadar getirdi. Sırf yazı yazma temeli taşıdığı ve yazıları biçimlendirmme amacı taşıdığı için çocuk denebilecek yaşta <strong>HTML</strong> ile tanıştım ve bir buçuk hafta gibi kısa bir zamanda öğrenmeyi başardım. Öyle ya, okunaklı yazılar yazacaktım.</p>
+<p>Kendime <strong>Wordpress</strong> tabanlı blog sitesini açtığım ilk andan itibaren hep yazılarımın erişilebilir ve okunaklı olması için çabalayıp durdum. Html ile şekillendirdiğim yazılarımı Bloğumda yayımlıdım, alıntı blogları, madde imli listeler, içeriği dolu tablolarla yazılarımı zenginleştirmeye gayret ettim.</p>
+<p>Daha sonra kendime  bir alanadı aldım ve yazılarımı müstakil bir blogta yayımlamaya başladım. Başladım başlamasına ama çok geçmeden sorunlarla uğraşmaktan yazı yazamaz oldum. Eklenti güncellemeleri, site bakım çalışmaları, tema tasarımı değişiklikleri... İnanın sıkılmaya başlamıştım bu Blog işinden artık.</p>
+<p>Yazı yazmak, sadece yazıya odaklanmak istiyordum. Başlıklandırmalarmış, listelendirmelermiş, tabloda veriler göstermekmiş... Bunların hiçbirisini dert etmeden, sadece yazmak istiyordum. Ve sonunda <strong>Markdown</strong> adı verilen bir yazma aracıyla tanıştım.</p>
+<h2><a class="header" href="#markdown-elkitabı" id="markdown-elkitabı">Markdown Elkitabı</a></h2>
+<p>Yazdığım yazıları basit karakterler kullanarak biçimlendirmek düşüncesi beni gerçekten de fethetmeyi başardı ve hemen bu dili öğrenmeye başladım. Öğrenmesi sadece bir günümü aldı ve  artık ben  de her türlü yazılarımı <strong>Markdown</strong> kullanarak yazmaya ve istediğim formatta çıktılar almaya başladım.</p>
+<p>Sizlere de bu elkitabını yazmaya karar verdim çünkü benim nimetlerinden sonuna kadar yararlandığım bu yöntemi kullanmanız gerektiğine inanıyorum. Eğer hazırsanız, Aşağıdaki <strong>Sonraki Konu</strong> bağlantısından ya da yukarıdaki içindekiler kısmından bir sonraki konuya geçerek başlayabilirsiniz.</p>
+<blockquote>
+<h6><a class="header" href="#not" id="not">NOT</a></h6>
+<p>Görme engelli okuyucular, ekran okuyucularının bir sonraki tuşu görmezden gelme komutuna bastıktan sonra, bir sonraki konu için sağ, bir önceki konu için sol ok tuşlarını kullanabilirler.</p>
+</blockquote>
+<h1><a class="header" href="#bu-kitap-nasıl-okunmalı" id="bu-kitap-nasıl-okunmalı">Bu Kitap Nasıl Okunmalı?</a></h1>
+<p>Elinizdeki bu kitap, pdf ya da docs gibi formatlarda hazırlanmak yerine tamamen Web tabanlı oluşturuldu. Bu yüzden bazı detayları kitabımız henüz başlamadan vermem gerektiğine inanıyorum.</p>
+<h2><a class="header" href="#Örnek-kodlar" id="Örnek-kodlar">Örnek Kodlar</a></h2>
+<p>Kitap içerisinde  yer alan konuları anlatırken bir yandan da örneklerle pekiştireceğiz. Örneklerdeki kaynak kodlarıyla rahat bir şekilde etkileşimde bulunabilmek adına sizlere önce kodları, ardından da kodun HTML çıktısını, en son olarak da bize nasıl göründüğünü göstereceğim. Ve her birini 5. seviye başlıklar altında bulunduracağım. Hemen aşağıda bir örnek bulabilirsiniz</p>
+<h5><a class="header" href="#markdown" id="markdown">Markdown</a></h5>
+<pre><code class="language-markdown">##### 5. Seviye başlık kullanılarak oluşturulmuş kod
+</code></pre>
+<h5><a class="header" href="#html" id="html">HTML</a></h5>
+<pre><code class="language-html">&lt;h5&gt;5. Seviye başlık kullanılarak oluşturulmuş kod&lt;/h5&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı" id="Çıktı">Çıktı</a></h5>
+<hr />
+<h5><a class="header" href="#5-seviye-başlık-kullanılarak-oluşturulmuş-kod" id="5-seviye-başlık-kullanılarak-oluşturulmuş-kod">5. Seviye başlık kullanılarak oluşturulmuş kod</a></h5>
+<hr />
+<p>Bu şekilde hem örnek kodları, hem HTML çıktısını, hem de tarayıcımızda nasıl göründüğünü anlama şansımız olacak. Sonuçları da iki ayraç içine alacağım ki rahatlıkla ayırt edebilelim.</p>
+<p>Kodların üzerinde bulunan buton ise söz konusu kodu panoya kopyalamanızı sağlayacak. Böylece istediğiniz editörde rahatlıkla kodları okuyabileceksiniz.</p>
+<h2><a class="header" href="#yazı-İçi-notlar" id="yazı-İçi-notlar">Yazı İçi Notlar</a></h2>
+<p>Konu içerisinde yeri geldiğinze sizlere önemli notlar vermem gerekirse bunu da 6. seviye başlık bulunan bir alıntı bloğu ile yapacağım. Örneğimizi hemen görelim:</p>
+<blockquote>
+<h6><a class="header" href="#not-1" id="not-1">Not</a></h6>
+<p>Markdown her alanda kullanılabilir.</p>
+</blockquote>
+<h2><a class="header" href="#kitaptan-yararlanma" id="kitaptan-yararlanma">Kitaptan Yararlanma</a></h2>
+<p>Kitabımız temelde dört ana başlıktan oluşacak:</p>
+<h3><a class="header" href="#başlarken" id="başlarken">Başlarken</a></h3>
+<p>Bu başlıkda Markdown’un ne olduğundan, çalışma mantığından ve bazı yazılımlardan bahsedeceğiz.</p>
+<h3><a class="header" href="#markdown-İle-neler-yapabiliriz" id="markdown-İle-neler-yapabiliriz">Markdown İle Neler Yapabiliriz?</a></h3>
+<p>Bu başlıkta  Markdown ile yapılabilecek şeylerden söz edeceğiz. Bence kitaptaki en sevdiğiniz ünite bu olacak.</p>
+<h3><a class="header" href="#temel-sözdizimi" id="temel-sözdizimi">Temel Sözdizimi</a></h3>
+<p>Bu başlıkta da, Markdown’u kullanmaya başlayacak ve yazılarımızzı temel olarak nasıl biçimlendireceğimizi konuşacağız.</p>
+<h3><a class="header" href="#gelişmiş-sözdizimi" id="gelişmiş-sözdizimi">Gelişmiş Sözdizimi</a></h3>
+<p>Bu başlıkta ise Markdown’u biraz daha gelişmiş bir şekilde kullanmaya başlayacağız. Dipnotlar, tablolar ve daha neler neler... Heveslenmeye başladınız değil mi? O zaman buyrun artık başlayalım.</p>
+<h1><a class="header" href="#başlarken-1" id="başlarken-1">Başlarken</a></h1>
+<p>Bu üniteyi bitirdikten sonra,</p>
+<ul>
+<li>Markdown’un ne olduğunu;</li>
+<li>Markdown’un çalışma mantığını;</li>
+<li>Markdown için gerekli olan yazılımları.</li>
+</ul>
+<p>Biliyor olacaksınız.</p>
+<h1><a class="header" href="#markdown-nedir" id="markdown-nedir">Markdown Nedir?</a></h1>
+<p>Markdown, John Gruber ve arkadaşları tarafından geliştirilmiş bir işaretleme dilidir. Tanımı biraz daha açmamız gerekirse Markdown, düz yazı içerisinde belirli karakterleri kullanarak söz konusu kısmı biçimlendirmeye ya da nitelemeye yarayan bir yazım şeklidir, diyebiliriz.</p>
+<p>İlk önceleri e-posta yazmak amacıyla kullanılmaya başlanmış olsa da kullanım kolaylığı ve taşınabilirliği onu son derece basit fakat önemli bir araç haline getirmiştir.</p>
+<h2><a class="header" href="#markdown-ne-değildir" id="markdown-ne-değildir">Markdown Ne Değildir?</a></h2>
+<p>Markdown kesinlikle bir programlama dili ya da HTML gibi bir yordam dili değildir. Markdown’un temel amacı, yazıldıktan sonra farklı araçlar kullanılarak istenilen belgeye rahatlıkla dönüşümünü sağlayabilmektir.</p>
+<p>Markdown ile yazılan belge istenilen her formata dökülebilmektedir. Bunu ilerleyen konularda detaylıca göreceğiz.</p>
+<h2><a class="header" href="#markdown-nasıl-Çalışır" id="markdown-nasıl-Çalışır">Markdown Nasıl Çalışır?</a></h2>
+<p>Siz istediğiniz gibi metninizi düzenlersiniz, kullandığınız uygulama düzenlediğiniz metni yorumlar ve size çıktı üretir. Bunu güzel bir tablo üzerinde inceleyelim ve adımları tek tek görelim:</p>
+<table><thead><tr><th>Adım</th><th>Yapılacak</th><th>Açıklama</th></tr></thead><tbody>
+<tr><td>1.</td><td>Not Defteri editöründe Markdown kullanarak yazınızı .md formatında yazarsınız.</td><td>Ben genelde Notepad++ kullanıyorum</td></tr>
+<tr><td>2.</td><td>Yazdığınız .md uzantılı dosyayı Pandoc komut istemini kullanarak istediğiniz formata dökersiniz</td><td>Bu konuya ileriki bölümlerde detaylı olarak değineceğiz ama basit bir kod örneği isterseniz <code>pandoc belge.md -f markdown -t html -s -o belge.html</code> kodunu örnek olarak alabilirsiniz.</td></tr>
+</tbody></table>
+<p>Gelin bir sonraki konuya geçelim ve Markdown için kurulabilecek yazılımlara bir göz atalım.</p>
+<h1><a class="header" href="#markdown-için-kurulacak-yazılımlar" id="markdown-için-kurulacak-yazılımlar">Markdown için kurulacak yazılımlar</a></h1>
+<p>Markdown için kullanılabilecek bir çok web tabanlı yazılım var aslında. Bunlara örnek olarak <a href="https://stackedit.io">StackEdit</a> ve <a href="https://dillinger.io">Dillinger</a> sitelerini verebiliriz. Ama biz bunu yapmak yerine için mutfağına inecek ve bilgisayarımıza bir yazılım kuracağız. Hem görme engelli  okuyucularımız tarafından erişilebilir olacak hem de gören okuyucularımız neredeyse Office yazılımlarını aratmayan bir arayüze kavuşmuş olacak.</p>
+<h2><a class="header" href="#typora" id="typora">Typora</a></h2>
+<p>Bu güne kadar kullandığım Markdown yazılımları arasında en çok dikkatimi çeken <strong>Typora</strong> oldu. Hem kullanım kolaylığı, hem erişilebilirliği hem de kapsamının geniş olması beni cezbeden özellikleri arasındaydı.</p>
+<p>Kurulumunu yapmak için <a href="https://typora.io">Typora</a> resmi internet sitesine gidelim ve <strong>Want Typora</strong> başlığının altındaki işletim sistemimize uygun dosyayı indirelim ve kuralım.</p>
+<p>Kurduktan sonra programımızı çalıştıralım ve tıpkı bir web sayfası şeklindeki uygulamamızın boş bir belgeyle açıldığını fark edelim.</p>
+<h2><a class="header" href="#pandoc" id="pandoc">Pandoc</a></h2>
+<p>Aslında mutfak yazılımımız olacak olan Pandoc, belgeler arasında dönüşüm yapabilen bir konsol uygulaması. Evet! Bol bol CMD kullanacağız. ama korkuya kapılmayın, yeri geldikçe sizlere .bat uzantılı dosyalarla neredeyse her şeyi sunacağım.</p>
+<p>Yazılımı resmi <a href="https://pandoc.org">Pandoc</a> sitesinden indirebilirsiniz. kurulumu yaptıktan sonra artık her zaman komut satırından <code>pandoc</code> ile başlayan komutlar vererek istediğiniz dönüşümleri gerçekleştirebilirsiniz. Pandoc yazılımı ayrıca Typora yazılımı için de kullanılıyor ve bu sayede .epub gibi formatlarda çıktı alabiliyoruz.</p>
+<h2><a class="header" href="#notepad" id="notepad">Notepad++</a></h2>
+<p>Çoğu programcının bilgisayarında olmazsa olmaz bir editör özelliği taşıyan bu küçük ama kıymetli yazılımı da kurmazsak olmaz. Markdown konusunda kendinizi geliştirip de herhangi bir yazılıma ihtiyaç duymadan yazılar yazmaya başladığınızda bu küçük araç sayesinde karakter seti sorunlarıyla karşılaşmadan belgelerinizi yazabileceksiniz.</p>
+<p>Kendisini de <a href="https://notepad-plus-plus.org/">buraya</a> tıklayarak indirebilirsiniz.</p>
+<p>Kurulumlarımızı da  hallettiğimize göre artık bir sonraki konuya geçebiliriz.</p>
+<h1><a class="header" href="#markdown-İle-neler-yapabiliriz-1" id="markdown-İle-neler-yapabiliriz-1">Markdown İle Neler Yapabiliriz?</a></h1>
+<p>Bu üniteyi bitirdikten sonra,</p>
+<ul>
+<li>Markdown kullanarak neler yapabileceğinizi;</li>
+<li>Markdown dili ile alakalı farklı yaklaşımları;</li>
+<li>Markdown’un kapsamını.</li>
+</ul>
+<p>Biliyor olacaksınız.</p>
+<h1><a class="header" href="#web-sitesi" id="web-sitesi">Web Sitesi</a></h1>
+<p>Bu konumuza bizzat benim kendi yazdığım bir yazıdan yapacağım bir alıntıyla başlamak istiyorum:</p>
+<blockquote>
+<p>Linux gibi ücretsiz dağıtımlar, Python gibi modern programlama dilleri, neredeyse sınırsız kaynaklar... İnsan nasıl olur da ortaya yeni teknolojik gelişmeler koymaz, inanın anlamıyorum.</p>
+<p><a href="https://borfirbora.com/firsatimiz-var">Fırsatımız Var - BorfirBora.com</a></p>
+</blockquote>
+<p>Php gibi Web tabanlı programlama dilleri, HTML gibi bir işaretleme dili varken.... Neden böyle bir şeye ihtiyaç duyulsun ki? Aslında tam da bu yüzden ihtiyaç var.</p>
+<p>Herkes PHP dilini öğrenecek kadar programlama becerisine sahip olmayabilir. Herkes HTML dilinin tamamını bilmek zorunda da değil üstelik. Belki de amacımız sadece yazı yazmak ve yazarken de istediğimiz biçimlendirmeleri yerine getirmekten ibaret.</p>
+<p>İşte burada devreye statik site oluşturucular giriyor. Sizler sadece Markdown ile yazılarınızı yazıyor, uygun klasöre yerleştiriyorsunuz ve gerisini site oluşturucusu yapıyor. Veritabanı ile uğraşmadan, sadece yazınızı yazıyorsunuz. tasarımı değiştirmek için bile yazılarınızı kaybetme korkusu da yok.</p>
+<p>Düşünsenize, sadece basit bir blog sitesi açmak için Wordpress gibi bir CMS kullanırken, sırf tasarımı için kaç gününüzü harcıyorsunuz?</p>
+<p>Ben de önceleri Web sitemi Wordpress altyapısında çalıştırıyordum. İstediğim her türlü tasarımı yapıyordum evet. Anket eklentileri, yorum paneli, etiket buludu... Wordpress’e bir güncelleme geliyordu ve benim en çok kullandığım anket eklentim, istenenleri karşılayamadığı için artık sayfamda çalışmıyordu. Ne kadar can sıkıcı değil mi?</p>
+<p>Şimdiki <a href="https://borfirbora.com/">BorfirBora.com</a> alanadına  sahip sitem artık Wordpress ile çalışmıyor. Hem sadece Markdown kullanarak yazıma odaklanabiliyoorum, hem de biliyor musunuz, Hosting için kesinlikle para ödemiyorum. Bunu nasıl mı yapıyorum? Gelin beraber şöyle bir bakalım:</p>
+<h2><a class="header" href="#jekyll" id="jekyll">JEKYLL</a></h2>
+<p>Jekyll, Ruby programlama dili ile geliştirilmiş bir statik site oluşturucusudur. Amacı basitçe sizin Markdown dili ile yazdığınız içeriklerinizi statik bir Web sitesine dönüştürmektir. Bilgisayarınıza <a href="https://jekyllrb.com">JekyllRB.com</a> sitesinden indireceğiniz Rubi dağıtım paketiyle kurabileceğiniz Jekyll, isterseniz ücretsiz olarak sizlere bir sunucu üzerinde verilebilir.</p>
+<p>Dünyanın en önde gelen versiyon kontrol sistemmi olan Git teknolojisinin en çok kullanıldığı bir platform var. Evet, herkesin bildiği <a href="https://github.com/">Github</a>‘tan bahsediyorum. Bu platformda herkes istediği gibi özgür uygulamalar geliştirebiliyor. Peki bu bizim ne işimize yarayacak diye sorabilirsiniz ama okumaya devam edin.</p>
+<p>Herkesin istediği dilde, istediği kadar kişiyle ortak çalışabilmesini sağlayan bu güzide platformun bir de <a href="https://github.io">Github Pages</a> adında, yazılım geliştiricilerin geliştirdikleri yazılımlarını tanıtması amacıyla sunduğu bir Web alanı var. İşte bu Web alanı Jekyll altyapısıyla çalışıyor. Üstelik de kendi alanadınızı da yönlendirip, istediğiniz kadar kullanabiliyorsunuz.</p>
+<p>Bu konuyla ilgili daha fazla billgiyi, <a href="https://borfirbora.com/">BorfirBora.com</a> adresinde yer alan iletişim kısmından benimle iletişime geçerek edinebilirsiniz.</p>
+<p>Açıkçası birden çok Jekyll benzeri otomatik site oluşturucusu var fakat ben Jekyll ile çalıştığım için kitabımızın bu kısmında sadece onu örnek verdim. Ufak olarak internette yapacağınız bir araştırma sizlere daha fazla bilgi verecektir şüphesiz.</p>
+<p>Bir sonraki konumuza geçelim ve bakalım Markdown, daha ne amaçlar için kullanılıyormuş.</p>
+<h1><a class="header" href="#doküman" id="doküman">Doküman</a></h1>
+<p>Hepimiz bir şekilde yazıyla haşır neşiriz günlük hayatımızda. Kimimiz ders notları tutuyor, kimimiz iş yaşamında aklında kalmasını istediği notları. Notlar kısmına ileriki konularda değineceğiz ama bizim asıl üstüne düşeceğimiz konu,Büyük belgeler olacak.</p>
+<p>Bir lise öğrencisinin bir derste tuttuğu bir senelik not, ortalama 80 sayfadır. Bunu Microsoft Word üzerinde yazdığını varsayalım. Dipnotları, tabloları, grafikleri ve daha niceleriyle bu 80 sayfalık doküman, sırf program büyük diye ne kadar da büyük bir işkenceye dönüşebilir.</p>
+<p>Bilgisayarların artık bütün bu yüklerin üstesinden geldiğini varsaysak bile, ki ben buna kesinlikle katılmıyorum, sizin kaliteli olan bilgisayarınız, söz konusu öğretmeninizin bilgisayarı olduğunda böyle olmayabilir. Ne yapacaksınız bu durumda?</p>
+<p>Diyelim ki bilgisayarınız bozuldu ve belgenizi neyse ki Flash belleğinize koydunuz. Üzerinde çalışmak zorunda olduğunuz bir akrabanızın bilgisayarı ve düşünün ki onun bilgisayarı da  o kadar yavaş ya da eski ki, dokümanınızı düzenlemek şöyle dursun, açamıyorsunuz bile. Ne oldu şimdi? Onca emek boşa mı gidecek?</p>
+<p>Tabii ki hayır. Bundan sonra en önemsizden en gerekliye, dokümanınız ne olursa olsun Markdown ile yazacaksınız. hem basit bir Text dosyası olacak, tabii .md uzantılı, hem de onu sizden istenen her formata tek bir tıklamayla dönüştürebileceksiniz. Örneğin üzerinde düzenleme yapmak isteyen başka bir arkadaşınıza Word, sadece incelemek isteyen öğretmeninize pdf olarak belgenizi verebilirsiniz. İsterseniz, HTML olarak dışa aktararak ders notlarınızdan tek sayfalık bir Web sitesi de elde edebilirsiniz. Daha da abartabilir, önceki konuda öğrendiğiniz gibi ünitelerinizi birer blog makalesi haline dönüştürebilirsiniz.</p>
+<p>Diyelim ki bilgisayarınızda ne Office programı var, ne de Pandoc gibi bir dönüştürme yazılımı. Bu durumda ne yapacaksınız? Gireceksiniz <a href="https://dillinger.io">Dillinger</a> sitesine, yapıştıracaksınız oradaki yazma alanına Markdown metninizi, dışa aktarma seçeneklerinden PDF’i seçeceksiniz ve direk öğretmeninize vereceksiniz.</p>
+<p>Kısa bir araştırmayla iOS ve Android için bile uygulamalar bulabilirsiniz. Ben yeri geldiğinde sizlere bu uygulamalar hakkında da bilgiler vereceğim.</p>
+<p>Gelin gidelim bir sonraki konuya ve bakalım Markdown bizi daha nasıl şaşırtacak.</p>
+<h1><a class="header" href="#not-2" id="not-2">Not</a></h1>
+<p>Hangimiz not tutmuyor ki bu hayatta? En alt kademe memurundan en üst kademedeki yöneticisine, en alt sınıftaki öğrencisinden en yüksek lisansına kadar herkes bir not tutma peşinde. Eh, insanlar akıllı tabii, unutmak istemiyorlar önemli olarak gördükleri şeyleri.</p>
+<p>Markdown, not tutmak konusunda da olağanüstü bir not ortalamasına sahip bir öğrenci gibi benim gözümde. iOS platformunda <strong>Edhita</strong> uygulamasını notlar almak ve onu daha sonra HTML biçiminde görüntülemek için kullanıyorum. Çünkü düzenli ve göze hoş gelen bir not, kesinlikle ardında iz bırakır.</p>
+<p>Bilgisayarda ise, Notepad++ uygulamasında yazıyorum bütün notlarımı. Pandoc ile çevirip HTML belgesine, her günü bir başlık olarak görüp ulaşıyorum istediğim tüm bilgilerime.</p>
+<p>Ama siz isterseniz <a href="https://simplenote.com/">Simplenote</a>, <a href="https://boostnote.io/">BoostNote</a> yazılımlarını da bir kurcalayın bakalım buralarda sizin işinize yarayacak bilgiler var mı?</p>
+<p>Bir sonraki konuya doğru ilerleyelim ve bakalım daha neler beceriyormuş bu Markdown dedikleri?</p>
+<h1><a class="header" href="#kitap" id="kitap">Kitap</a></h1>
+<p><strong>Yok artık!</strong> dediğinizi duyar gibiyim ama demeyin efendim. Bir sonraki ünitede Markdown’u kullanmaya başlayınca, şu anda aklınıza gelmeyecek kullanım alanlarını da siz keşfedeceksiniz, tıpkı benim keşfettiğim fakat bu kitaba koymadığım gibi.</p>
+<p>Kitap yazmak isteyenlerin büyük bir hevesle bu satırları okuduğunu biliyorum. O yüzden sadede geliyor ve laf kalabalığını bırakıyorum hemen.</p>
+<p>Her bir bölümü bir Markdown dosyası olan bir kitabınız olsa, üstelik bu kitabınızı <a href="https://dropbox.com">Dropbox</a> üzerinde depolasanız, her yerden çalışma imkanınız olsa nasıl olurdu? Üstelik bu platform üzerinde yayımladığınız kitabınızı hem PDF, hem Epub, hem MOBİ hem de  başlı başına bir Web sitesi şeklinde yayımlayabilseniz ne düşünürdünüz?</p>
+<p>Üstelik site, sahibi olduğunuz kitaplarınızı, değer veren insanların biçtiği değerlerle satma kolaylığını size sunsa? Tadından yenmiyor değil mi?</p>
+<p>O zaman sizi doğruca <a href="https://leanpub.com">Leanpub</a> sitesine alalım ve yapmak istediklerinizi orada yapın. Kitaplarınızdan beni de haberdar etmeyi unutmayın.</p>
+<p>Bu kadar şeyi, ufacık bir yordamla yapabiliyorsunuz gördüğünüz gibi. Bir sonraki konumuz, “Daha bitmedi mi?” dedirtecek cinsten.</p>
+<h1><a class="header" href="#slayt" id="slayt">Slayt</a></h1>
+<p>Sizi daha az şaşırtmak isterdim  ama üzgünüm, devam ediyorum.</p>
+<p>PowerPoint kullanmayanınız yok değil mi? peki o kapsamlı program ile yaptıklarınızı markdown ile yapmak mümkün desem, ne hissedersiniz? İnanın ben bu işi çok seviyorum, hem Web sayfası şeklinde hem de pdf formatında sunumlar hazırlayıp isteyenlere rahatlıkla gönderiyorum.</p>
+<p>Bu konuda tek geçtiğim slayt arayüzü olan <a href="https://github.com/gnab/remark">ReMark</a>‘ı bir inceleyin, eminim memnun kalacaksınız. Eğer bir başka slayt arayüzü ararsanız da size <a href="http://jdan.github.io/cleaver/">Cleaver</a>‘ı önerebilirim.</p>
+<p>Bir sonraki konu, herkesi derinden etkileyecek bir konu olacak, söz veriyorum.</p>
+<h1><a class="header" href="#e-posta" id="e-posta">E-posta</a></h1>
+<p>Bundan yaklaşık üç sene kadar önce bana gelen kaliteli e-postalara ve onları gönderenlere hep imreniyordum. İmreniyordum çünkü bütün bağlantıları, başlıkları ve grafikleriyle tam bir Web sitesi şeklindeydi.</p>
+<p>Daha sonra bütün e-postalarımı Adobe Dreamwiever ile yazıp, Mozilla Thunderbird ile göndermeye başladım. Tam bu iş beni kasıyor derken markdown, bu konuda da imdadıma yetişti ve süper bir eklentiyle tanıştım.</p>
+<p><a href="https://markdown-here.com/">Markdown Here</a> eklentisi, zengin editörlerde markdown ile yazdığınız metinleri tek bir tıklamayla HTML’e çeviren, alanının en iyi Chrome eklentisi. Metninizi markdown formatında yazıyor, sağ tıklıyor ve <strong>Toggle Markdown</strong>‘a tıklıyorsunuz ve zengin içerikli metniniz artık önünüzde...</p>
+<p>Bir sonraki konuda ise sizlere benim son zamanlarda boğuştuğum bir konudan bahsedeceğim. Ve nasıl çözüm bulduğumdan. Buyrun, sonraki konuya...</p>
+<h1><a class="header" href="#dokümantasyon" id="dokümantasyon">Dokümantasyon</a></h1>
+<p>Bu kitabı sizlere neyle hazırlıyorum dersiniz? Tabii ki de <strong>Markdown</strong>!</p>
+<p>Markdown ile yapabilecekleriniz elbette ki sizin hayal gücünüze bağlı fakat benim için asıl işlevi, kaliteli dokümantasyonlar hazırlamak. Blog yazıların da birer doküman olduğunu düşünürseniz bu iş, Kitaplara, yazılımlar için oluşturulan yardım belgelerine kadar eğriliyor elbette.</p>
+<p>Bu kitabı nasıl hazırladığım elbette ki <strong>ekler</strong> kısmında yer alacak ama benim asıl değineceğim konu, Markdown ile ne tarz belgeler hazırlanabileceği konusu.</p>
+<h2><a class="header" href="#tek-dosya-html" id="tek-dosya-html">Tek Dosya HTML</a></h2>
+<p>Hani uygulamalarımızı kullanırken <strong>F1</strong> tuşuna basarız da kocaman bir Web sayfası çıkar ya karşımıza? İşte o tarz sayfaları çok rahatlıkla hazırlayabiliriz Markdown ile. <strong>Pandoc</strong> ve <strong>Typora</strong> ikilisi yardımıyla bu işleri tek bir .md dosyası ile halledebilir, istediğimiz formatta çıktı üretebiliriz.</p>
+<h2><a class="header" href="#doküman-web-sayfası" id="doküman-web-sayfası">Doküman Web Sayfası</a></h2>
+<p>Şu an bu kitabı okuduğunuz gibi bir arayüzden farklı olarak onlarca çeşit arayüz kullanarak siz de bu şekilde bir yardım Web sitesi oluşturabilirsiniz. Aşağıdaki örneklerini vereceğim Web sitelerinden daha fazlası var ama ben sizlere en yaygın olanlarını sunacağım.</p>
+<table><thead><tr><th align="left">Site</th><th>Açıklama</th></tr></thead><tbody>
+<tr><td align="left"><a href="https://readthedocs.org/">Read The Docs</a></td><td>Github üzerinde .md dosyalarını barındırıyor ve bu site yardımıyla da bizim kitabımıza benzer tasarımlara sahip Web sitelerine dönüştürüyorsunuz.</td></tr>
+<tr><td align="left"><a href="https://www.mkdocs.org/">MKDocs</a></td><td>Aynı prensiplere sahip bir başka site daha. Md uzantılı dosyalarla çalışıyor, .yaml uzantılı dosya yardımıyla sitenizin ayarlarını yapıyor ve oluşan Web sayfanızı istediğiniz yerde yayımlayabiliyorsunuz.</td></tr>
+<tr><td align="left"><a href="https://docusaurus.io/">Docusaurus</a></td><td>Versiyon kontrol sistemi entegrasyonu da sağlayan bu site de kesinlikle ihtiyaçlarınızı karşılayacak niteliklere sahip.</td></tr>
+<tr><td align="left"><a href="https://vuepress.vuejs.org/">VuePress</a></td><td>Arkasında <strong>Vue</strong> olan güçlü bir statik site oluşturucusu ve özellikle dokümantasyon oluşturmak için bire bir.</td></tr>
+<tr><td align="left"><a href="https://jekyllrb.com">Jekyll</a></td><td><a href="https://borfirbora.com/">BorfirBora.Com</a> sitesinden tutun da bir çok projemde kullandığım, öğrenmesi son derece kolay ve kullanışlı bir statik site oluşturucusu. <a href="2/web-sitesi.html">Web sitesi</a> bölümünde de konuştuğumuz gibi <strong>Github</strong> tarafından da kullanılıyor ve tamamen ücretsiz.</td></tr>
+</tbody></table>
+<p>Nihayet neler yapabileceğimiz konusuna bir nokta koyduk. Daha yazmak isterdim ama devamını sizin ilginize ve isteklerinize bırakıyorum. Her şeyi yazarsam, bana ne soracaksınız, değil mi?</p>
+<p>Bir sonraki ünitemizde artık bu muazzam dile başlıyoruz.</p>
+<h1><a class="header" href="#temel-sözdizimi-1" id="temel-sözdizimi-1">Temel Sözdizimi</a></h1>
+<p>Bu üniteyi bitirdikten sonra,</p>
+<ul>
+<li>Markdown ile biçimlendirme kurallarını;</li>
+<li>Markdown ile bağlantı ekleme kurallarını;</li>
+<li>Markdown ile tüm biçimlendirme varyasyonlarını.</li>
+</ul>
+<p>Biliyor olacaksınız.</p>
+<h1><a class="header" href="#başlamadan-Önce" id="başlamadan-Önce">Başlamadan Önce</a></h1>
+<p>Bu muazzam dili öğrenmeden önce sizlerle güzel bir öğrenme ortamı oluşturalım istiyorum. Bu ortam tabii ki Pandoc ve Notepad++’tan oluşacak.</p>
+<blockquote>
+<h6><a class="header" href="#not-3" id="not-3">Not</a></h6>
+<p><a href="3/../1/kurulacak-yazilimlar.html">Markdown İçin Kurulacak Yazılımlar</a> bölümünde gördüğümüz Markdown editörlerini kullanmayacağız henüz. Bunun sebebi ise editörlere ileriki bölümlerde yer verecek olmamız. Şimdilik işin sadece dil kısmıyla ilgileneceğiz. Bu yüzden, diğer ve eğlenceli işler, daha sonra.</p>
+</blockquote>
+<p>Sizlere;</p>
+<ol>
+<li>Yeni klasör oluşturun;</li>
+<li>Klasörün içerisine bir adet cmd, bir adet md dosyası oluşturun...</li>
+</ol>
+<p>Gibi isteklerde bulunurdum ama burada amacımız dil kısmı olduğu için, bu dosyaları bizzat ben size vereceğim.</p>
+<p><a href="3/../markdown_cmd.zip">markdown-cmd.zip</a> isimli dosyayı indirip üzerinde sağ tıklayarak <strong>Klasöre Çıkart</strong> ya da <strong>Ayıkla</strong> diyerek kendinize <strong>Markdown_cmd</strong> adlı bir klasör yaratın. Oluşacak bu klasörün içeriği ise şöyle:</p>
+<table><thead><tr><th align="left">Dosya Adı</th><th>Açıklaması</th></tr></thead><tbody>
+<tr><td align="left">.html yap.bat</td><td>Tıkladığımızda .md uzantılı dosyamızdan .html uzantılı çıktı üretecek komut dizisi dosyası.</td></tr>
+<tr><td align="left">belge.md</td><td>Markdown içeriğimizi yazacağımız .md uzantılı markdown belgesi.</td></tr>
+<tr><td align="left">web.html</td><td><strong>.html yap.bat</strong> dosyasına tıklandığında oluşacak olan .html dosyası..</td></tr>
+</tbody></table>
+<blockquote>
+<h6><a class="header" href="#not-4" id="not-4">Not</a></h6>
+<ul>
+<li>Arşivi ilk kez dışa aktardığınızda <strong>web.html</strong> dosyası bulunmayacak.</li>
+<li>Bu dosyalar ile ilgili işlem yapabilmek için mutlaka &gt; <a href="3/../1/kurulacak-yazilimlar.html">Markdown İçin Kurulacak Yazılımlar</a> bölümünde anlatılan <strong>Pandoc</strong> yazılımını başarılı bir şekilde kurmuş olmanız gerekmektedir.</li>
+</ul>
+</blockquote>
+<h1><a class="header" href="#başlıklar" id="başlıklar">Başlıklar</a></h1>
+<p>Yazımıza başlık eklemek için <strong>#</strong> karakterini kullanacağız. # karakterinin sayısı, başlığımızın seviyesini belirleyecek. Aşağıdaki tabloda kullanabileceğimiz başlık seviyelerini bir görelim:</p>
+<table><thead><tr><th>Markdown</th><th>HTML</th></tr></thead><tbody>
+<tr><td><code># Seviye 1</code></td><td><code>&lt;h1&gt;Seviye 1&lt;/h1&gt;</code></td></tr>
+<tr><td><code>## Seviye 2</code></td><td><code>&lt;h2&gt;Seviye 2&lt;/h2&gt;</code></td></tr>
+<tr><td><code>### Seviye 3</code></td><td><code>&lt;h3&gt;Seviye 3&lt;/h3&gt;</code></td></tr>
+<tr><td><code>#### Seviye 4</code></td><td><code>&lt;h4&gt;Seviye 4&lt;/h4&gt;</code></td></tr>
+<tr><td><code>##### Seviye 5</code></td><td><code>&lt;h5&gt;Seviye 5&lt;/h5&gt;</code></td></tr>
+<tr><td><code>###### Seviye 6</code></td><td><code>&lt;h6&gt;Seviye 6&lt;/h6&gt;</code></td></tr>
+</tbody></table>
+<blockquote>
+<h6><a class="header" href="#not-5" id="not-5">Not</a></h6>
+<p>Oluşturduğunuz başlıktan sonra gelecek olan satır, başlık satırının altına yazılamaz. Mutlaka bir satır boş bırakılmalıdır. Bunu alışkanlık haline getirebilmek için eklenen her başlıktan sonra iki kez <strong>Enter</strong> tuşuna basılmalı ve boş satır oluşturulmalıdır.</p>
+</blockquote>
+<p>Şimdi biraz örnek yapalım:</p>
+<h5><a class="header" href="#markdown-1" id="markdown-1">Markdown</a></h5>
+<pre><code class="language-markdown"># ben birinci seviye bir başlığım
+
+Ben de arkasından gelen metinim.
+</code></pre>
+<h5><a class="header" href="#html-1" id="html-1">HTML</a></h5>
+<pre><code class="language-html">&lt;h1&gt;ben birinci seviye bir başlığım&lt;/h1&gt;
+&lt;p&gt;Ben de arkasından gelen metinim.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-1" id="Çıktı-1">Çıktı</a></h5>
+<hr />
+<h1><a class="header" href="#ben-birinci-seviye-bir-başlığım" id="ben-birinci-seviye-bir-başlığım">ben birinci seviye bir başlığım</a></h1>
+<p>Ben de arkasından gelen metinim.</p>
+<hr />
+<blockquote>
+<h6><a class="header" href="#not-6" id="not-6">Not</a></h6>
+<p>Başlık yapacağınız ibareden önce, tıpkı sonrasında olduğı gibi bir satır boş olmalı.</p>
+</blockquote>
+<h5><a class="header" href="#markdown-2" id="markdown-2">Markdown</a></h5>
+<pre><code class="language-markdown">Ben başlıktan önceki paragrafım.
+
+### Ben de üçüncü seviye bir başlığım
+
+Ben de başlığın ardından gelen paragrafım.
+</code></pre>
+<h5><a class="header" href="#html-2" id="html-2">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Ben başlıktan önceki paragrafım.&lt;/p&gt;
+&lt;h3&gt;Ben de üçüncü seviye bir başlığım&lt;/h3&gt;
+&lt;p&gt;Ben de başlığın ardından gelen paragrafım.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-2" id="Çıktı-2">Çıktı</a></h5>
+<hr />
+<p>Ben başlıktan önceki paragrafım.</p>
+<h3><a class="header" href="#ben-de-üçüncü-seviye-bir-başlığım" id="ben-de-üçüncü-seviye-bir-başlığım">Ben de üçüncü seviye bir başlığım</a></h3>
+<p>Ben de başlığın ardından gelen paragrafım.</p>
+<hr />
+<h2><a class="header" href="#klasik-başlıklar" id="klasik-başlıklar">Klasik Başlıklar</a></h2>
+<p>Eğer yazdığımız satırın hemen altına en az üç adet <strong>=</strong> koyarsak birinci seviye, <strong>-</strong> koyarsak ise ikinci seviye başlık olur.</p>
+<p>Örneğimizle bunu bir anlayalım:</p>
+<h5><a class="header" href="#markdown-3" id="markdown-3">Markdown</a></h5>
+<pre><code class="language-markdown">Bu birinci seviye başlık
+===
+
+Bu da ikinci seviye başlık
+---
+
+Bu da başlıktan sonraki paragraf
+</code></pre>
+<h5><a class="header" href="#html-3" id="html-3">HTML</a></h5>
+<pre><code class="language-html">&lt;h1&gt;Bu birinci seviye başlık&lt;/h1&gt;
+&lt;h2&gt;Bu da ikinci seviye başlık&lt;/h2&gt;
+&lt;p&gt;Bu da başlıktan sonraki paragraf&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-3" id="Çıktı-3">Çıktı</a></h5>
+<hr />
+<h1><a class="header" href="#bu-birinci-seviye-başlık" id="bu-birinci-seviye-başlık">Bu birinci seviye başlık</a></h1>
+<h2><a class="header" href="#bu-da-ikinci-seviye-başlık" id="bu-da-ikinci-seviye-başlık">Bu da ikinci seviye başlık</a></h2>
+<p>Bu da başlıktan sonraki paragraf</p>
+<hr />
+<p>Son olarak gelin, tüm bu öğrendiklerimizle güzel ve işe yarar bir örnek yapalım ve başlıklar konusunu kapatalım:</p>
+<h5><a class="header" href="#markdown-4" id="markdown-4">Markdown</a></h5>
+<pre><code class="language-markdown"># Yeni Bir Blog Yazmak
+ 
+ Herkes her gün yazı yazmayı bekliyor, ilhamının gelmesini. Oysa ilham gelebilmesi için yapılması gerekenler, atılması gereken adımlar var:
+ 
+## Odaklanmak
+ 
+Yazı yazmak için odaklanmak şart fakat bunu nasıl yapacağını bilmeli insan. Öncelikle çevremizdeki gürültülerden ve dikkati bozacak her türlü durumdan kurtulmalıyız.
+
+## Bir Anda Yazmaya Çalışmamak
+
+Odaklanmak konusu hallolduktan sonra kendinizden bir anda on sayfa yazı yazmayı beklemeyin. Daha gidecek çok yolunuz, yapacak çok şeyiniz var. Yazmaya başladıktan sonra ne kadar erken sıkılmış olursanız olun, yazmayı o zaman bırakın ve tekrar yazasınız gelince devam edin çünkü yazamıyorsanız, boşuna çabalamanın manası yok.
+</code></pre>
+<h5><a class="header" href="#html-4" id="html-4">HTML</a></h5>
+<pre><code class="language-html">&lt;h1&gt;Yeni Bir Blog Yazmak&lt;/h1&gt;
+&lt;p&gt;Herkes her gün yazı yazmayı bekliyor, ilhamının gelmesini. Oysa ilham gelebilmesi için yapılması gerekenler, atılması gereken adımlar var:&lt;/p&gt;
+&lt;h2&gt;Odaklanmak&lt;/h2&gt;
+&lt;p&gt;Yazı yazmak için odaklanmak şart fakat bunu nasıl yapacağını bilmeli insan. Öncelikle çevremizdeki gürültülerden ve dikkati bozacak her türlü durumdan kurtulmalıyız.&lt;/p&gt;
+&lt;h2&gt;Bir Anda Yazmaya Çalışmamak&lt;/h2&gt;
+&lt;p&gt;Odaklanmak konusu hallolduktan sonra kendinizden bir anda on sayfa yazı yazmayı beklemeyin. Daha gidecek çok yolunuz, yapacak çok şeyiniz var. Yazmaya başladıktan sonra ne kadar erken sıkılmış olursanız olun, yazmayı o zaman bırakın ve tekrar yazasınız gelince devam edin çünkü yazamıyorsanız, boşuna çabalamanın manası yok.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-4" id="Çıktı-4">Çıktı</a></h5>
+<hr />
+<h1><a class="header" href="#yeni-bir-blog-yazmak" id="yeni-bir-blog-yazmak">Yeni Bir Blog Yazmak</a></h1>
+<p>Herkes her gün yazı yazmayı bekliyor, ilhamının gelmesini. Oysa ilham gelebilmesi için yapılması gerekenler, atılması gereken adımlar var:</p>
+<h2><a class="header" href="#odaklanmak" id="odaklanmak">Odaklanmak</a></h2>
+<p>Yazı yazmak için odaklanmak şart fakat bunu nasıl yapacağını bilmeli insan. Öncelikle çevremizdeki gürültülerden ve dikkati bozacak her türlü durumdan kurtulmalıyız.</p>
+<h2><a class="header" href="#bir-anda-yazmaya-Çalışmamak" id="bir-anda-yazmaya-Çalışmamak">Bir Anda Yazmaya Çalışmamak</a></h2>
+<p>Odaklanmak konusu hallolduktan sonra kendinizden bir anda on sayfa yazı yazmayı beklemeyin. Daha gidecek çok yolunuz, yapacak çok şeyiniz var. Yazmaya başladıktan sonra ne kadar erken sıkılmış olursanız olun, yazmayı o zaman bırakın ve tekrar yazasınız gelince devam edin çünkü yazamıyorsanız, boşuna çabalamanın manası yok.</p>
+<hr />
+<h1><a class="header" href="#paragraflar" id="paragraflar">Paragraflar</a></h1>
+<p>Paragraf oluşturabilmek, Markdown’daki en basit sözdizimidir. Paragrafı oluşturan cümle topluluklarının öncesinde ve  sonrasında birer satır  boşluk varsa bu, söz konusu cümlelerin paragraf olduğu anlamına gelir.</p>
+<p>Bir örnekle bunu hemen görelim:</p>
+<h5><a class="header" href="#markdown-5" id="markdown-5">Markdown</a></h5>
+<pre><code class="language-markdown">Bu birinci paragraf
+
+Bu da ikinci paragraf.
+
+Bu da üçüncü ve son paragraf
+</code></pre>
+<h5><a class="header" href="#html-5" id="html-5">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Bu birinci paragraf&lt;/p&gt;
+&lt;p&gt;Bu da ikinci paragraf.&lt;/p&gt;
+&lt;p&gt;Bu da üçüncü ve son paragraf&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-5" id="Çıktı-5">Çıktı</a></h5>
+<hr />
+<p>Bu birinci paragraf</p>
+<p>Bu da ikinci paragraf.</p>
+<p>Bu da üçüncü ve son paragraf</p>
+<hr />
+<blockquote>
+<h6><a class="header" href="#not-7" id="not-7">Not</a></h6>
+<ul>
+<li>Başlık, alıntı bloğu ve ya liste gibi bir işaretle başlamıyorsa belgenin ilk satırı da paragraf başlangıcı olarak kabul edilir.</li>
+<li>Paragraflarda iç içe paragraf diye bir şey söz konusu değildir.</li>
+</ul>
+</blockquote>
+<h2><a class="header" href="#yeni-satıra-geçmek" id="yeni-satıra-geçmek">Yeni Satıra Geçmek</a></h2>
+<p>Bazen şiir gibi metinlerimizde paragraflar yerine bir alt satıra geçmek isteyebiliriz. Bu durumda yapmamız gereken, satırın bitmesini istediğimiz yerde iki ya da ikiden fazla <em>boşluk</em> bırakmaktır. Hemen bunu bir örnekle görelim:</p>
+<h5><a class="header" href="#markdown-6" id="markdown-6">Markdown</a></h5>
+<pre><code class="language-markdown">Birinci mısra,  
+İkinci mısra,  
+Üçüncü mısra,  
+Dördüncü mısra.
+</code></pre>
+<h5><a class="header" href="#html-6" id="html-6">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Birinci mısra,&lt;br /&gt;
+İkinci mısra,&lt;br /&gt;
+Üçüncü mısra,&lt;br /&gt;
+Dördüncü mısra.&lt;/p&gt;
+
+</code></pre>
+<h5><a class="header" href="#Çıktı-6" id="Çıktı-6">Çıktı</a></h5>
+<hr />
+<p>Birinci mısra,<br />
+İkinci mısra,<br />
+Üçüncü mısra,<br />
+Dördüncü mısra.</p>
+<hr />
+<h1><a class="header" href="#vurgulamalar" id="vurgulamalar">Vurgulamalar</a></h1>
+<p>Yazılarımızda önemli yerleri vurgulamak isteriz. Altını çizmek, koyu ve italik yapmak genelde bizim ihtiyaçlarımızı karşılar. Gelin bunun nasıl yapılacağını adım adım öğrenelim.</p>
+<h2><a class="header" href="#altı-Çizili-yapmak" id="altı-Çizili-yapmak">Altı Çizili Yapmak</a></h2>
+<p>Bir metinde altını çizmek istediğimiz ibarenin başına bir adet <strong>alt çizgi</strong> <code>_</code> ya da bir adet <strong>yıldız</strong> <code>*</code> koyarız. Daha sonra altı çizili kısmın bittiği yerin sonuna da bir adet <strong>alt çizgi</strong> ya da <strong>yıldız</strong> koyarak işlemi tamamlarız. Aşağıdaki örneği inceleyelim:</p>
+<h5><a class="header" href="#markdown-7" id="markdown-7">Markdown</a></h5>
+<pre><code class="language-markdown">Aşağıdaki cümlelerin hangisinde deyim, anlamıyla _yanlış_ eşleştirilmiştir?
+</code></pre>
+<h5><a class="header" href="#html-7" id="html-7">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Aşağıdaki cümlelerin hangisinde deyim, anlamıyla &lt;em&gt;yanlış&lt;/em&gt; eşleştirilmiştir?&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-7" id="Çıktı-7">Çıktı</a></h5>
+<hr />
+<p>Aşağıdaki cümlelerin hangisinde deyim, anlamıyla <em>yanlış</em> eşleştirilmiştir?</p>
+<hr />
+<h2><a class="header" href="#koyu-yapmak" id="koyu-yapmak">Koyu Yapmak</a></h2>
+<p>Aynı şekilde, metni koyu yapabilmek için de <strong>yıldız</strong> <code>*</code> ya da <strong>alt çizgi</strong> <code>_</code> karakterini kullanırız. Fakat burada dikkat etmemiz gereken nokta, bu sefer birer tane değil ikişer tane kullanmalıyız. Örnek geliyor:</p>
+<h5><a class="header" href="#markdown-8" id="markdown-8">Markdown</a></h5>
+<pre><code class="language-markdown">Yazar, yukarıdaki cümleyle neyi anlatmak __istiyor__ olabilir?
+</code></pre>
+<h5><a class="header" href="#html-8" id="html-8">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Yazar, yukarıdaki cümleyle neyi anlatmak &lt;strong&gt;istiyor&lt;/strong&gt; olabilir?&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-8" id="Çıktı-8">Çıktı</a></h5>
+<hr />
+<p>Yazar, yukarıdaki cümleyle neyi anlatmak <strong>istiyor</strong> olabilir?</p>
+<hr />
+<blockquote>
+<h6><a class="header" href="#not-8" id="not-8">Not</a></h6>
+<p>Eğer işleme alt çizgi ile başlamışsanız, bitirirken de alt çizgiyi kullanmalısınız. Örneğin <code>Benim adım __Ela**</code> şeklinde bir kullanım uygularsanız, sonucunuz hatalı olacaktır. Doğrusu <code>Benim adım __Ela__</code> şeklinde olmalı.</p>
+</blockquote>
+<h2><a class="header" href="#hem-koyu-hem-altı-Çizili-yapmak" id="hem-koyu-hem-altı-Çizili-yapmak">Hem Koyu Hem Altı Çizili Yapmak</a></h2>
+<p>Bazen düzeni o kadar abartırız ki, metinlerimizdeki bazı ibarelerin hem koyu hem altının çizili olması gibi biraz tuhaf isteklerimiz olabilir. <strong>Markdown</strong>, bu konuda da isteklerimizi karşılıyor ve bizi bir kez daha kendisine hayran bırakıyor. Gelin bunun nasıl yapıldığına bir bakalım:</p>
+<p>Bunu yapabilmek için metnin hem koyu hem de altı çizili olmasını istediğimiz yerin başına üç adet <strong>yıldız</strong> ya da üç adet <strong>alt çizgi</strong> koyarız. İşlemi bitirmek için ise aynı işlemi tekrarlarız. Yani ya üç adet <strong>yıldız</strong>, ya da üç adet <strong>alt çizgi</strong>.</p>
+<blockquote>
+<h6><a class="header" href="#not-9" id="not-9">Not</a></h6>
+<p>Eğer üç adet <strong>yıldız</strong> ile başlamışsak mutlaka **yıldız ile bitirmeliyiz. Bu kural <strong>alt çizgi</strong> ile kullanım için de geçerli tabii ki. Eğer üç adet <strong>alt çizgi</strong> kullanmışsak, bitirirken de aynısını yapmalıyız.</p>
+</blockquote>
+<p>Gelin artık örneğimize geçelim:</p>
+<h5><a class="header" href="#markdown-9" id="markdown-9">Markdown</a></h5>
+<pre><code class="language-markdown">Kullanım kolaylığı bakımından en rahat olan akıllı cihazları ***Apple*** üretmektedir.
+</code></pre>
+<h5><a class="header" href="#html-9" id="html-9">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Kullanım kolaylığı bakımından en rahat olan akıllı cihazları &lt;strong&gt;&lt;em&gt;Apple&lt;/em&gt;&lt;/strong&gt; üretmektedir.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-9" id="Çıktı-9">Çıktı</a></h5>
+<hr />
+<p>Kullanım kolaylığı bakımından en rahat olan akıllı cihazları <strong><em>Apple</em></strong> üretmektedir.</p>
+<hr />
+<h1><a class="header" href="#alıntı-blokları" id="alıntı-blokları">Alıntı Blokları</a></h1>
+<p>Yazdığımız yazılarda alıntılar yapmamız gerektiği zamanlarda bunları <strong>alıntı bloğu</strong> içinde gösteririz ki okurken onun bize değil, kaynak aldığımız kişiye ait olduğunu fark edebilelim. Gelin bu bölümde bunun nasıl yapıldığına bakalım.</p>
+<p>Alıntılamak istediğimiz metnin başına bir adet <strong>büyüktür</strong> <code>&gt;</code> işareti koyar ve bir boşluk bırakırız. Bundan sonra yazacağımız her şey, biz yeni satıra geçene kadar <strong>alıntı bloğu</strong> ile vurgulanmış olur. Eğer <code>Enter</code> tuşuyla alt satıra geçersek söz konusu blok artık biter. Tıpkı paragraflarda olduğu gibi blok ile işimiz bittiğinde iki kez <code>Enter</code> tuşuna basarak yeni paragrafa geçmeyi alışkanlık hâline getirmeliyiz.</p>
+<p>Gelin bir örnek yapalım ve <strong>alıntı bloğu</strong> neymiş, bir görelim:</p>
+<h5><a class="header" href="#markdown-10" id="markdown-10">Markdown</a></h5>
+<pre><code class="language-markdown">&gt; &quot;En hakiki mürşit ilimdir, fendir.&quot; M. Kemal ATATÜRK
+</code></pre>
+<h5><a class="header" href="#html-10" id="html-10">HTML</a></h5>
+<pre><code class="language-html">&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;En hakiki mürşit ilimdir, fendir.&amp;quot; M. Kemal ATATÜRK&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-10" id="Çıktı-10">Çıktı</a></h5>
+<hr />
+<blockquote>
+<p>&quot;En hakiki mürşit ilimdir, fendir.&quot; M. Kemal ATATÜRK</p>
+</blockquote>
+<hr />
+<h2><a class="header" href="#alıntı-bloklarında-birden-Çok-paragraf-kullanmak" id="alıntı-bloklarında-birden-Çok-paragraf-kullanmak">Alıntı Bloklarında Birden Çok Paragraf Kullanmak</a></h2>
+<p>Bazen, alıntılamak istediğimiz metin bir cümleden daha fazlasıdır. Örneğin kitabın bir bölümü, birkaç paragraflık konuşma gibi; alıntıladığımız metin biraz daha geniş olabilir.</p>
+<p>Bu genişliği karşılayabilmek için <strong>alıntı bloğu</strong> kullanımımızı da genişletmemiz gerekir. Bunu şu şekilde yaparız:</p>
+<p>Önce <strong>büyüktür</strong> işareti ile alıntı bloğuna başlarız. Yazımızı yazar ve yeni bir paragraf için <code>enter</code> tuşuna bir defa basarız. Daha sonra bir adet <strong>büyüktür</strong> koyar ve ikinci <code>enter</code> tuşuna da basarız. Ardından tekrar <strong>büyüktür</strong> koyar ve bir boşluk bırakarak ikinci paragrafımızı da yazarız.</p>
+<p>Bu biraz karmaşık oldu. Bu yüzden hemen örnek geliyor:</p>
+<h5><a class="header" href="#markdown-11" id="markdown-11">Markdown</a></h5>
+<pre><code class="language-markdown">&gt; Bu birinci paragraf.
+&gt;
+&gt; Bu da ikinci paragraf.
+</code></pre>
+<h5><a class="header" href="#html-11" id="html-11">HTML</a></h5>
+<pre><code class="language-html">&lt;blockquote&gt;
+&lt;p&gt;Bu birinci paragraf.&lt;/p&gt;
+&lt;p&gt;Bu da ikinci paragraf.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-11" id="Çıktı-11">Çıktı</a></h5>
+<hr />
+<blockquote>
+<p>Bu birinci paragraf.</p>
+<p>Bu da ikinci paragraf.</p>
+</blockquote>
+<hr />
+<blockquote>
+<h6><a class="header" href="#not-10" id="not-10">Not</a></h6>
+<p>Alıntı bloklarının içinde sonraki derslerde öğreneceğiniz elemanların tamamını kullanabilirsiniz.</p>
+</blockquote>
+<h2><a class="header" href="#İç-İçe-alıntı-blokları-kullanma" id="İç-İçe-alıntı-blokları-kullanma">İç İçe Alıntı Blokları Kullanma</a></h2>
+<p>Hani bir önceki konumuzda bahsetmiştik ya, hem <strong>altı çizili</strong> hem <strong>koyu</strong> olmasını isteyenlerden? Burada da onlara hitap eden bir kullanım söz konusu.</p>
+<p>Yazarın cümlesini alıntı bloğuna, yazarın ismini de daha derin alıntı bloğuna almak isteyenler için gelin bunun nasıl yapıldığına bir bakalım:</p>
+<p>Yine <strong>büyüktür</strong> işaretini koyup bir boşluk bırakarak ilk bloğumuzu yazalım. Ardından bir kez <code>enter</code> tuşuna basarak bir alt satıra geçelim. Derin alıntı bloğu için ise yan yana iki adet <strong>büyüktür</strong> koyup bir boşluk verelim ve derin blokta olmasını istediğimiz ibareyi yazalım.</p>
+<p>Bunun nasıl olduğunu daha somut görebilmek için işte size bir örnek:</p>
+<h5><a class="header" href="#markdown-12" id="markdown-12">Markdown</a></h5>
+<pre><code class="language-markdown">&gt; En hakiki mürşit ilimdir, fendir.
+&gt;&gt; M. Kemal ATATÜRK
+</code></pre>
+<h5><a class="header" href="#html-12" id="html-12">HTML</a></h5>
+<pre><code class="language-html">&lt;blockquote&gt;
+&lt;p&gt;En hakiki mürşit ilimdir, fendir.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;M. Kemal ATATÜRK&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+</code></pre>
+<h5><a class="header" href="#Çıktı-12" id="Çıktı-12">Çıktı</a></h5>
+<hr />
+<blockquote>
+<p>En hakiki mürşit ilimdir, fendir.</p>
+<blockquote>
+<p>M. Kemal ATATÜRK</p>
+</blockquote>
+</blockquote>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Sayfa Gezinme">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Sayfa gezinme">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+      	  		  				  				  </body>
+</html>
