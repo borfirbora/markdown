@@ -1,4 +1,4 @@
-> Markdown El Kitabı
+# Markdown El Kitabı
 
 Bu Depo, Bora Fırlangeç tarafından kaleme alınan **Markdown El Kitabı**'nın kaynak kodlarını ve yayımlanmış hâlini içerir.
 
